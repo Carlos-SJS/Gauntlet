@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+  - Frame
+  - Player projectile
+  - Enemy
+  - SpawningSpace
+  - Spawner
   layers:
   - Default
   - TransparentFX
