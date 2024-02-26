@@ -9,10 +9,15 @@ public class PlayerUIController : MonoBehaviour{
     public GameObject key_display;
     public GameObject potion_display;
 
+    private GameManagerShit gm;
+
     public void Start() {
         clearUI();
 
         pc = gameObject.GetComponent<PlayerController>();
+        gm = GameObject.Find("GameManager").GetComponent<GameManagerShit>();
+
+        gm.getUIComponents(pc.type, out score_text, out hp_text, out key_display, out potion_display);
     }
 
     public void Update() {

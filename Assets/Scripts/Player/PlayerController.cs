@@ -3,6 +3,7 @@ using System;
 
 public abstract class PlayerController : MonoBehaviour{
     [SerializeField] private float speed = 0;
+    public string type;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -15,7 +16,8 @@ public abstract class PlayerController : MonoBehaviour{
     public int pots = 0;
 
     private PlayerUIController uic;
-    void Start() {
+    public void Start() {
+        Debug.Log("Starting player controller");
         rb = transform.GetComponent<Rigidbody2D>();
         anim = transform.GetComponent<Animator>();
         uic = transform.GetComponent<PlayerUIController>();
