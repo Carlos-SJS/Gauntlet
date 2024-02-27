@@ -10,11 +10,16 @@ public class GameManagerShit: MonoBehaviour{
     }
 
     public void getUIComponents(string type, out TextMeshProUGUI score, out TextMeshProUGUI hp, out GameObject keys, out GameObject pots){
-        Transform cont = GameObject.Find("Canvas").transform.GetChild(1).Find(type).gameObject.transform;
+        Debug.Log("Type = " + type);
+        
+        Transform cont = GameObject.Find("Canvas").transform.GetChild(1).Find(type);
+        Debug.Log("Found obj " + cont.gameObject.name);
 
         score = cont.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
         hp = cont.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>();
         keys = cont.GetChild(2).gameObject;
         pots = cont.GetChild(3).gameObject;
+
+        Debug.Log("Got ui shit");
     }
 }

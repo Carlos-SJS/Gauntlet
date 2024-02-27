@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ArrowController: MonoBehaviour{
+public class HammerController: MonoBehaviour{
     public System.Action onDestroy;
     public Sprite[] sprites;
     public Sprite hit_sprite;

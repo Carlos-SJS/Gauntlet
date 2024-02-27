@@ -192,6 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  type: Elf
   last_dir: {x: 1, y: 0, z: 0}
   score: 0
   hp: 0

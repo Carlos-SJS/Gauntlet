@@ -12,12 +12,13 @@ public class PlayerUIController : MonoBehaviour{
     private GameManagerShit gm;
 
     public void Start() {
-        clearUI();
-
         pc = gameObject.GetComponent<PlayerController>();
         gm = GameObject.Find("GameManager").GetComponent<GameManagerShit>();
 
         gm.getUIComponents(pc.type, out score_text, out hp_text, out key_display, out potion_display);
+        Debug.Log("Initiated ui");
+
+        clearUI();
     }
 
     public void Update() {
