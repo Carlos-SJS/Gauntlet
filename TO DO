@@ -8,10 +8,15 @@
 [X] Treasure items
 [X] Food items
 [X] Ghost spawners
-[ ] warp pads
-[ ] Warrior
-[ ] Wizard
-[ ] Valkyrie
-[ ] remove 1hp per sec
+[X] Warrior
+[X] Wizard
+[X] Valkyrie
 [X] Doors
 [X] Arrow particle
+[X] remove 1hp per sec
+[ ] Fix projectile rotation issues
+[ ] Level 2
+[ ] warp pads
+[ ] Level 3
+[ ] Main menu
+[ ] Game over stuff

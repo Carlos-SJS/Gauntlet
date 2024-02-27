@@ -38,7 +38,7 @@ public abstract class PlayerController : MonoBehaviour{
     }
 
     public String prefix; 
-    private String[] anim_names = {"_up", "_top_right", "_right", "_down_right", "_down", "_down_left", "_left", "_top_left"};
+    private String[] anim_names = {"_up", "_up_right", "_right", "_down_right", "_down", "_down_left", "_left", "_up_left"};
 
     void Update() {
         Vector3 dir = new Vector3(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"), 0);
@@ -75,9 +75,12 @@ public abstract class PlayerController : MonoBehaviour{
             handleAttack(dir);
 
                     
-        }else{
+        }else if(dir != Vector3.zero){
             if(anim_paused) togleAnimations(); 
             rb.velocity = dir*speed;
+        }else if(!anim_paused){
+            rb.velocity = Vector3.zero;
+            togleAnimations();
         }
     }
 

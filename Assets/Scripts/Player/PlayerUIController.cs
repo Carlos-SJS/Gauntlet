@@ -41,10 +41,12 @@ public class PlayerUIController : MonoBehaviour{
     }
 
     public void updateHorses(){
+        if(hp_text == null) return;
         hp_text.text = pc.hp.ToString();
     }
 
     public void clearUI(){
+        if(score_text == null) return;
         score_text.text = "0";
         hp_text.text = "0";
         

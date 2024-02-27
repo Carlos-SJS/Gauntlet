@@ -10,12 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1610923854337333318}
   - component: {fileID: 1610923854337333317}
-  - component: {fileID: 2959150669739014069}
   - component: {fileID: 1610923854337333315}
   - component: {fileID: 1610923854337333314}
-  - component: {fileID: 6288730057823489339}
+  - component: {fileID: -6370450520582166264}
   m_Layer: 0
-  m_Name: Hammer
+  m_Name: Magic thingy
   m_TagString: Player projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1438464738, guid: 6eaaa1f8a5293db47bd5e6b6d478c4a6, type: 3}
+  m_Sprite: {fileID: -1463796878, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,32 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2959150669739014069
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1610923854337333313}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.23403828, y: -0.029607266}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.2837855, y: 0.5121851}
-  m_EdgeRadius: 0
 --- !u!61 &1610923854337333315
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -127,7 +100,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0021026134, y: -0.03208062}
+  m_Offset: {x: 0.04716742, y: -0.022167586}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -138,7 +111,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7391498, y: 0.08221483}
+  m_Size: {x: 0.35053557, y: 0.35694718}
   m_EdgeRadius: 0
 --- !u!50 &1610923854337333314
 Rigidbody2D:
@@ -161,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6288730057823489339
+--- !u!114 &-6370450520582166264
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,20 +143,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1610923854337333313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e81c8f61844a2f418c15f780481c6c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a44cfa314845f346be9f2d2c8acf7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: -1665485838, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
-  - {fileID: 1249378566, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
-  - {fileID: -1658876752, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
-  - {fileID: -1731834856, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
-  - {fileID: -139783580, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
-  - {fileID: -255748319, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
-  - {fileID: 37977044, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
-  - {fileID: -2008939754, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
-  hit_sprite: {fileID: -2019359702, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
-  speed: 8
+  - {fileID: 1747234433, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
+  - {fileID: -259129418, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
+  - {fileID: 981618254, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
+  - {fileID: 1219167645, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
+  - {fileID: 910497644, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
+  - {fileID: -1483027487, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
+  - {fileID: 350154093, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
+  - {fileID: 754588219, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
+  hit_sprite: {fileID: -1984962131, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
+  speed: 12
   dir: {x: 0, y: 0, z: 0}
   pc: {fileID: 0}
-  damage: 60
+  damage: 100
