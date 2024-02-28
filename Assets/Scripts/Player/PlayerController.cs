@@ -16,11 +16,13 @@ public abstract class PlayerController : MonoBehaviour{
     public int pots = 0;
 
     private PlayerUIController uic;
+    private GameManagerShit gm;
     public void Start() {
         Debug.Log("Starting player controller");
         rb = transform.GetComponent<Rigidbody2D>();
         anim = transform.GetComponent<Animator>();
         uic = transform.GetComponent<PlayerUIController>();
+        gm = transform.GetComponent<GameManagerShit>();
 
         uic.clearUI();
         uic.updateHorses();
@@ -63,6 +65,14 @@ public abstract class PlayerController : MonoBehaviour{
         }
         if(mdir != -1 && anim.GetCurrentAnimatorClipInfo(0)[0].clip.name == prefix+anim_names[mdir]) mdir = -1;
         anim.SetInteger("mov_dir", mdir);
+
+        if(Input.GetKeyDown(KeyCode.X)){
+            if(pots > 0){
+                pots--;
+                uic.updatePots();
+                gm.popPotion();
+            }
+        }
 
         if(Input.GetButton("Fire1")){
             if(!anim_paused) togleAnimations();
