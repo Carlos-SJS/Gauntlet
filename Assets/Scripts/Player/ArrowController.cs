@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 public class ArrowController: MonoBehaviour{
@@ -31,7 +32,11 @@ public class ArrowController: MonoBehaviour{
             else ix = 4;
         }
 
-        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[ix];
+        float angle = Vector3.Angle(new Vector3(1, 0, 0), dir);
+        transform.Rotate(0,0, angle);
+        transform.GetChild(0).Rotate(0,0, -angle);
+
+        transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = sprites[ix];
     }
 
     void Update(){
@@ -40,7 +45,7 @@ public class ArrowController: MonoBehaviour{
     }
 
     void destroySelf(){
-        gameObject.GetComponent<SpriteRenderer>().sprite = hit_sprite;
+        transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = hit_sprite;
         alive = false;
         rb.velocity = Vector3.zero;
         Invoke("actuallyDestroy", .07f);

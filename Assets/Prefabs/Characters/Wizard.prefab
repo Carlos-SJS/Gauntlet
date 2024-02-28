@@ -219,5 +219,5 @@ MonoBehaviour:
   hp: 600
   keys: 0
   pots: 0
-  prefix: w
+  prefix: z
   magical_thingy_that_i_do_not_know_how_it_should_be_called: {fileID: 1610923854337333313, guid: 051ef15ac355a7f4a913fd9d849f10c2, type: 3}
