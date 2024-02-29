@@ -14,6 +14,9 @@ public class GameManagerShit: MonoBehaviour{
 
     public GameObject[] heroes;
 
+    public AudioClip potion_use;
+    private AudioSource asource;
+
     private void Start(){
         GameObject ch = Instantiate(heroes[GameState.character], spwawn_position, quaternion.identity);
         pc = ch.GetComponent<PlayerController>();
@@ -26,10 +29,14 @@ public class GameManagerShit: MonoBehaviour{
 
         GameObject.Find("Main Camera").GetComponent<CameraController>().target = ch.transform;
 
+        asource = GameObject.Find("audio").GetComponent<AudioSource>();
+
         Invoke("tickHP", 1f);
     }
 
     public void popPotion(){
+        asource.clip = potion_use;
+        asource.Play();
         while(peeps_in_frame.Count > 0) Destroy(peeps_in_frame[0]);
     }
 

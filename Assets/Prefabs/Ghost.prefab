@@ -107,7 +107,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   rdist: 0.7
-  damage: 50
+  damage: 25
   death: {fileID: 8300000, guid: caa449572d8233242a81fe831a9fe6aa, type: 3}
   in_frame: 0
 --- !u!50 &6148543939282843662

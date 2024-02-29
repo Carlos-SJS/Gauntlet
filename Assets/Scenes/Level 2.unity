@@ -11552,6 +11552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 356756935}
   - component: {fileID: 356756934}
+  - component: {fileID: 356756936}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -11579,6 +11580,7 @@ MonoBehaviour:
   - {fileID: 8479232980348688210, guid: 80e38487518a582429034ab81c0821be, type: 3}
   - {fileID: 8479232980348688210, guid: d60ee45447aaf7b42944f02ad0cd09ea, type: 3}
   - {fileID: 8479232980348688210, guid: bb2d4d7553b81264cae4c9756fa9c17b, type: 3}
+  potion_use: {fileID: 8300000, guid: 3aaaa993ce6629b40b7d670b82758dc8, type: 3}
 --- !u!4 &356756935
 Transform:
   m_ObjectHideFlags: 0
@@ -11594,6 +11596,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &356756936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356756933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60be7f8aa5a68b4cb054d00f32bbcad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &368114655
 GameObject:
   m_ObjectHideFlags: 0
