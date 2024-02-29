@@ -19,17 +19,23 @@ public class GhostController : EnemyController{
     public AudioClip death;
 
     void Start() {
-        target = GameObject.FindGameObjectWithTag("Player").gameObject.transform;
         rb = transform.GetComponent<Rigidbody2D>();
         anim = transform.GetComponent<Animator>();
         gm = GameObject.Find("GameManager").gameObject.GetComponent<GameManagerShit>();
         asource = GameObject.Find("audio").GetComponent<AudioSource>();
+
+        Invoke("getTargetData", .1f);
+    }
+
+    void getTargetData(){
+        target = GameObject.FindGameObjectWithTag("Player").gameObject.transform;
     }
     private String[] anim_names = {"g_up", "g_top_right", "g_right", "g_down_right", "g_down", "g_down_left", "g_left", "g_top_left"};
 
     [SerializeField] bool in_frame = false;
 
     void Update() {
+        if(target == null) return;
         if(in_frame){
             Vector3 dir = target.position - transform.position;
             if(Math.Abs(dir.x) < .25f) dir.x = 0;
