@@ -8,6 +8,7 @@ public class  WizardController: PlayerController{
         if(! has_magic) return;
 
         GameObject mt = Instantiate(magical_thingy_that_i_do_not_know_how_it_should_be_called, transform.position, quaternion.identity);
+        asource.Play();
         MagicThingyController mtc = mt.GetComponent<MagicThingyController>();
         mtc.onDestroy += onSwordDestroy;
         mtc.dir = last_dir;

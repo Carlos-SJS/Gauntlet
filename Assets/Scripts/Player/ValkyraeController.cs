@@ -8,6 +8,7 @@ public class  ValkyraeController: PlayerController{
         if(! has_sword) return;
 
         GameObject s = Instantiate(sword, transform.position, quaternion.identity);
+        asource.Play();
         SwordController sc = s.GetComponent<SwordController>();
         sc.onDestroy += onSwordDestroy;
         sc.dir = last_dir;

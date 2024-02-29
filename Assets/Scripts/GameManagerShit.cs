@@ -1,14 +1,30 @@
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.SceneManagement;
+using System;
+using Unity.Mathematics;
 
 public class GameManagerShit: MonoBehaviour{
     public List<GameObject> peeps_in_frame = new List<GameObject>();
 
-    private PlayerController pc;
+    public PlayerController pc;
+
+    public Vector3 spwawn_position;
+
+    public GameObject[] heroes;
 
     private void Start(){
-        pc = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        GameObject ch = Instantiate(heroes[GameState.character], spwawn_position, quaternion.identity);
+        pc = ch.GetComponent<PlayerController>();
+        pc.score = GameState.score;
+        pc.hp = GameState.hp;
+        pc.pots = GameState.pots;
+        pc.keys = GameState.keys;
+
+        Debug.Log("Recorded hp = " + GameState.hp);
+
+        GameObject.Find("Main Camera").GetComponent<CameraController>().target = ch.transform;
 
         Invoke("tickHP", 1f);
     }
@@ -32,5 +48,16 @@ public class GameManagerShit: MonoBehaviour{
         pc.addHorsePower(-1);
         Invoke("tickHP", 1f);
 
+    }
+
+    public void gameOver(){
+        GameState.score = pc.score;
+        SceneManager.LoadScene("GameOver");
+    }
+
+    public void gotoScene(String scene){
+        GameState.score = pc.score;
+        GameState.hp = pc.hp;
+        SceneManager.LoadScene(scene);
     }
 }

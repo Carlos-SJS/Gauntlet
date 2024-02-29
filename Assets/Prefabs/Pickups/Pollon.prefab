@@ -103,6 +103,9 @@ MonoBehaviour:
   score: 0
   hp: 100
   potion: 0
+  level_warp: 0
+  to_level: 
+  pickup_sound: {fileID: 8300000, guid: f003c3f204aaac846aa66d929dd43b17, type: 3}
 --- !u!50 &6191188138789595851
 Rigidbody2D:
   serializedVersion: 4

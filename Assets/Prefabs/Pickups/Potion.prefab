@@ -103,6 +103,9 @@ MonoBehaviour:
   score: 0
   hp: 0
   potion: 1
+  level_warp: 0
+  to_level: 
+  pickup_sound: {fileID: 8300000, guid: 5249e7c1119bafd478927056d024c68b, type: 3}
 --- !u!61 &6836386540048344743
 BoxCollider2D:
   m_ObjectHideFlags: 0

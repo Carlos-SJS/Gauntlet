@@ -10,6 +10,7 @@ public class WarriorController: PlayerController{
         if(! has_hammer) return;
 
         GameObject h = Instantiate(hammer, transform.position, quaternion.identity);
+        asource.Play();
         HammerController hc = h.GetComponent<HammerController>();
         hc.onDestroy += onArrowDestroy;
         hc.dir = last_dir;

@@ -17,12 +17,17 @@ public abstract class PlayerController : MonoBehaviour{
 
     private PlayerUIController uic;
     private GameManagerShit gm;
+
+    public AudioClip shoot_sound;
+    public AudioSource asource;
     public void Start() {
-        Debug.Log("Starting player controller");
         rb = transform.GetComponent<Rigidbody2D>();
         anim = transform.GetComponent<Animator>();
         uic = transform.GetComponent<PlayerUIController>();
-        gm = transform.GetComponent<GameManagerShit>();
+        gm = GameObject.Find("GameManager").transform.GetComponent<GameManagerShit>();
+
+        asource = gameObject.GetComponent<AudioSource>();
+        asource.clip = shoot_sound;
 
         uic.clearUI();
         uic.updateHorses();
@@ -121,9 +126,9 @@ public abstract class PlayerController : MonoBehaviour{
 
     public void addHorsePower(int horses){
         hp+=horses;
-        hp = Math.Min(hp, 0);
+        hp = Math.Max(hp, 0);
         uic.updateHorses();
 
-        if(hp == 0) Debug.Log("Game over, you suck dude");
+        if(hp <= 0) gm.gameOver();
     }
 }

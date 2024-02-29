@@ -15,11 +15,15 @@ public class GhostController : EnemyController{
 
     public int damage = 50;
 
+    private AudioSource asource;
+    public AudioClip death;
+
     void Start() {
         target = GameObject.FindGameObjectWithTag("Player").gameObject.transform;
         rb = transform.GetComponent<Rigidbody2D>();
         anim = transform.GetComponent<Animator>();
         gm = GameObject.Find("GameManager").gameObject.GetComponent<GameManagerShit>();
+        asource = GameObject.Find("audio").GetComponent<AudioSource>();
     }
     private String[] anim_names = {"g_up", "g_top_right", "g_right", "g_down_right", "g_down", "g_down_left", "g_left", "g_top_left"};
 
@@ -76,6 +80,8 @@ public class GhostController : EnemyController{
             gm.peeps_in_frame.Add(gameObject);
         }else if(other.CompareTag("Player")){
             target.gameObject.GetComponent<PlayerController>().addHorsePower(-damage);
+            asource.Play();
+            asource.clip = death;
             Destroy(gameObject);
         }
     }

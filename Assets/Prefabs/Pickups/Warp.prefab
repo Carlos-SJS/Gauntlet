@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7053806607789300446}
   - component: {fileID: 7053806607789300447}
   m_Layer: 0
-  m_Name: Treasure
+  m_Name: Warp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2044396427, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
+  m_Sprite: {fileID: -1355487866, guid: ea9f7612630b9044e996ad26e31ff79f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,12 +100,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 0
-  score: 100
+  score: 0
   hp: 0
   potion: 0
-  level_warp: 0
-  to_level: 
-  pickup_sound: {fileID: 8300000, guid: f003c3f204aaac846aa66d929dd43b17, type: 3}
+  level_warp: 1
+  to_level: Level 2
+  pickup_sound: {fileID: 8300000, guid: e3e46272796d44c4fa62de81eaa61c1d, type: 3}
 --- !u!61 &7053806607789300446
 BoxCollider2D:
   m_ObjectHideFlags: 0
